@@ -1,12 +1,12 @@
 <div align="center">
 
-# DecisionGate
+# AskUp
 
-### Your agent should understand you before it works for you.
+### The decision system that teaches your agent to manage up.
 
-**Most agents start doing before they understand. DecisionGate asks the right questions first, learns how you think, and gradually earns the freedom to handle small things without asking again.**
+**Most agents start doing before they understand. AskUp teaches an agent to ask up first, learn how you think, and gradually earn the freedom to handle small things without asking again.**
 
-[![Status: public alpha](https://img.shields.io/badge/status-public%20alpha-1f6feb)](https://github.com/mxfff114-star/decision-gate) [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-d22128)](LICENSE) [![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-111827)](https://agentskills.io/specification)
+[![Status: public alpha](https://img.shields.io/badge/status-public%20alpha-1f6feb)](https://github.com/mxfff114-star/ask-up) [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-d22128)](LICENSE) [![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-111827)](https://agentskills.io/specification)
 
 </div>
 
@@ -14,7 +14,7 @@
 
 Tell an agent, "help me with my pitch," and it often starts writing a generic deck before it knows your company, your investor, your goal, or what "good" means to you. It may sound busy while quietly taking you in the wrong direction.
 
-DecisionGate turns that first rush into a useful conversation:
+AskUp turns that first rush into a useful conversation:
 
 1. **It asks until the important parts are clear.** Goals, audience, boundaries, constraints, and what a good result looks like. It researches what it can before asking you.
 2. **It says back what it understands.** You see a shared working brief before important work begins, so a misunderstanding is cheap to fix.
@@ -24,7 +24,7 @@ The point is not to make AI slower. It is to spend a little attention at the sta
 
 ## Start Deep. Then Move Fast.
 
-DecisionGate starts in **Context Mode** by default. On a new or meaningful task, it asks focused questions in small rounds until both sides share the same brief. Once a preference, boundary, or working style is confirmed, it becomes usable context for compatible future tasks.
+AskUp starts in **Context Mode** by default. On a new or meaningful task, it asks focused questions in small rounds until both sides share the same brief. Once a preference, boundary, or working style is confirmed, it becomes usable context for compatible future tasks.
 
 At any time, the agent offers a clear choice:
 
@@ -37,7 +37,7 @@ This is not a forever-onboarding ritual. As the shared context becomes reliable,
 
 ## What Changes For You
 
-| You say | Without DecisionGate | With DecisionGate |
+| You say | Without AskUp | With AskUp |
 | --- | --- | --- |
 | "Help me raise a seed round." | It writes a generic fundraising plan before it understands your business or target. | It asks what is missing, researches the rest, confirms the plan it heard, then builds the right investor list, deck, and outreach drafts. |
 | "Fix the title in this document." | It carries the same uncertainty into a tiny task. | Once it knows the context, it fixes the title without reopening discovery. |
@@ -57,7 +57,7 @@ This is not a forever-onboarding ritual. As the shared context becomes reliable,
 
 ## How It Stays Useful
 
-Under the hood, DecisionGate uses a lightweight decision policy. It helps an agent decide when to investigate, when to ask, when to make a reversible assumption, and when to stop for approval.
+Under the hood, AskUp uses a lightweight decision policy. It helps an agent decide when to investigate, when to ask, when to make a reversible assumption, and when to stop for approval.
 
 ```mermaid
 flowchart LR
@@ -77,11 +77,11 @@ flowchart LR
 | **Standard** | A new, meaningful task with an unresolved tradeoff | Build context in focused rounds, confirm a compact shared brief, then work. |
 | **Strict** | Send, publish, deploy, delete, spend, change permissions, or mutate production data | The same decision card plus an exact approval boundary. The agent prepares; the host must enforce the stop. |
 
-This is why DecisionGate is not a generic clarification checklist. It makes the early conversations valuable, then gets out of the way when understanding has been earned.
+This is why AskUp is not a generic clarification checklist. It makes the early conversations valuable, then gets out of the way when understanding has been earned.
 
 ## What It Feels Like
 
-| Situation | A weak agent | With DecisionGate |
+| Situation | A weak agent | With AskUp |
 | --- | --- | --- |
 | First discussion of a fundraising goal | Writes a generic deck from a five-word prompt. | Asks focused questions, researches what it can, then reflects back the investor, stage, story, constraints, and next deliverables it understood. |
 | Rename one heading after the brief is confirmed | Reopens an irrelevant discovery interview. | Makes the exact edit. |
@@ -105,7 +105,7 @@ This release is a policy layer. A markdown skill can tell an agent to pause; it 
 ## Install
 
 ```bash
-npx skills add mxfff114-star/decision-gate -a codex
+npx skills add mxfff114-star/ask-up -a codex
 ```
 
 The skill starts in Context Mode for a meaningful task when it lacks a reliable shared brief. The user may choose Fast lane to skip low-risk confirmation. It stays out of the way for clear, low-risk, reversible work once enough context is known.
