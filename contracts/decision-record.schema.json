@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mxfff114-star/ask-up/contracts/decision-record.schema.json",
+  "title": "AskUp Decision Record",
+  "type": "object",
+  "required": ["schema_version", "task_id", "task_class", "evidence_checked", "approval_boundary"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "task_id": { "type": "string", "minLength": 1 },
+    "task_class": { "type": "string", "enum": ["reversible", "internal", "external", "financial", "sensitive", "irreversible"] },
+    "evidence_checked": { "type": "array", "items": { "type": "string" } },
+    "unresolved_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "decision_delta", "evidence_unresolved", "user_owns_answer", "timely_consequence", "resolution"],
+        "properties": {
+          "category": { "type": "string" },
+          "decision_delta": { "type": "boolean" },
+          "evidence_unresolved": { "type": "boolean" },
+          "user_owns_answer": { "type": "boolean" },
+          "timely_consequence": { "type": "boolean" },
+          "resolution": { "type": "string", "enum": ["ask", "research", "assume", "proceed"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assumptions": { "type": "array", "items": { "type": "string" } },
+    "approval_boundary": { "type": "string", "enum": ["none", "draft_review", "explicit_action_approval"] }
+  },
+  "additionalProperties": false
+}
