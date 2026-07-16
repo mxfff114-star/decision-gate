@@ -2,22 +2,45 @@
 
 # DecisionGate
 
-### Give agents judgment before autonomy.
+### Gets the small things done. Thinks before the big things. Never decides for you.
 
-**Investigate first. Ask only outcome-changing questions. Learn confirmed preferences. Stop before irreversible actions.**
+**No interrogation for simple work. No risky guessing for important work. No accidental sends, posts, prices, payments, or deploys.**
 
 [![Status: public alpha](https://img.shields.io/badge/status-public%20alpha-1f6feb)](https://github.com/mxfff114-star/decision-gate) [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-d22128)](LICENSE) [![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-111827)](https://agentskills.io/specification)
 
 </div>
 
-## The Missing Layer
+## The AI You Meant To Hire
 
-Agents fail in two expensive ways:
+You should be able to talk to an AI like a capable teammate:
 
-- They ask for every missing detail and turn simple work into an interview.
-- They infer too much and send, publish, deploy, delete, quote, or modify data without a real decision boundary.
+- Give it a simple task, and it gets on with it.
+- Give it a messy goal, and it does the homework before coming back to you.
+- Give it something consequential, and it makes the choice clear before anything leaves the building.
 
-DecisionGate is an open-source decision policy for agents with real-world tools. It helps an agent decide when to investigate, when to ask, when to make a reversible assumption, and when to stop for approval.
+That is DecisionGate: a small skill that stops an AI from being either an anxious questionnaire or an overconfident intern.
+
+## What Changes For You
+
+| You say | Without DecisionGate | With DecisionGate |
+| --- | --- | --- |
+| "Fix the title in this document." | It asks five setup questions. | It fixes the title. |
+| "Find investors and reach out." | It either asks you for everything or emails the wrong people. | It researches a shortlist, writes drafts, and asks only what changes the outcome before sending. |
+| "Post this update." | It may publish with the wrong wording, audience, or timing. | It gives you a ready-to-approve post and waits at the exact publish boundary. |
+| "Use the same approach as last time." | It mistakes familiarity for permission. | It reuses your style, but checks again when money, reputation, or authority is on the line. |
+
+**The result:** less back-and-forth, less rework, and far fewer moments where you wonder what your AI just did in your name.
+
+## The Simple Promise
+
+1. **If it is small and reversible, do it now.**
+2. **If it can be researched, research it first.**
+3. **If your answer changes the outcome, ask one good question.**
+4. **If it can cost money, affect people, or go public, prepare everything and let you make the final call.**
+
+## How It Stays Useful
+
+Under the hood, DecisionGate uses a lightweight decision policy. It helps an agent decide when to investigate, when to ask, when to make a reversible assumption, and when to stop for approval.
 
 ```mermaid
 flowchart LR
