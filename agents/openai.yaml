@@ -1,0 +1,4 @@
+interface:
+  display_name: "AskUp"
+  short_description: "Help your agent understand you first, then act with less supervision."
+  default_prompt: "Use $ask-up to build a shared understanding before meaningful work, then handle clear reversible tasks directly. Offer me Fast lane whenever I want to skip low-risk confirmation."
