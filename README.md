@@ -2,7 +2,7 @@
 
 # AskUp
 
-### The decision system that teaches your agent to manage up.
+### The decision system that teaches your agent how to manage up humans.
 
 **Most agents start doing before they understand. AskUp teaches an agent to ask up first, learn how you think, and gradually earn the freedom to handle small things without asking again.**
 
@@ -141,4 +141,3 @@ The most valuable contributions are de-identified traces that show where the ski
 ## License
 
 [Apache-2.0](LICENSE)
-
